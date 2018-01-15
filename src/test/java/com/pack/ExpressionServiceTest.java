@@ -19,7 +19,7 @@ public class ExpressionServiceTest {
 
 	@Before
 	public void setUpStreams() {
-		String path = "/home/vaibhav/clear/test.txt";
+		String path = "test.txt";
 		String content = fileReader.readFile(path);
 		exp = HelperService.getJsonAsClass(content, Expression.class);
 	}
