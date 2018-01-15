@@ -10,7 +10,7 @@ import com.linear.util.HelperService;
 public class App {
 	public static void main(String[] args) {
 		FileReaderService fileReaderService = new FileReaderService();
-		String json = fileReaderService.readFile("/home/vaibhav/clear/test.txt");
+		String json = fileReaderService.readFile("test.txt");
 		if (json.length() == 0) {
 			System.out.println(MapKeys.FILE_PARSING_ERROR);
 			return;

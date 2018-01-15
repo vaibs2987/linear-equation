@@ -7,11 +7,12 @@ import java.io.IOException;
 public class FileReaderService {
 
 	public String readFile(String path) {
+		ClassLoader classLoader = getClass().getClassLoader();
 		StringBuilder builder = new StringBuilder();
 		BufferedReader br = null;
 		FileReader reader = null;
 		try {
-			reader = new FileReader(path);
+			reader = new FileReader(classLoader.getResource(path).getFile());
 			br = new BufferedReader(reader);
 			String currentLine;
 			while ((currentLine = br.readLine()) != null) {
